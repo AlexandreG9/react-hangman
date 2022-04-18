@@ -1,3 +1,45 @@
+@font-face {
+    font-family: "Sweet Rasty";
+    src: local("Sweet Rasty"), url("./fonts/Sweety-Rasty.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Sono Bold";
+    src: local("Sono Bold"), url("./fonts/Sono-Bold.woff2") format("woff");
+}
+
+html {
+    min-width: 100%;
+    min-height: 100%;
+    background: rgb(86, 171, 47);
+    background: linear-gradient(167deg, rgba(86, 171, 47, 1) 0%, rgba(168, 224, 99, 1) 100%);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    background-color: rgb(84, 159, 51);
+    font-family: "Sweet Rasty", serif;
+    font-size: 6em;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(131, 229, 13, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}
+
+.mysteryWord {
+    font-family: "Sono Bold", serif;
+    font-size: xxx-large;
+}
+
 .App {
-  text-align: center;
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    margin: 0 0.5em;
 }

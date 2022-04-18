@@ -3,6 +3,7 @@ import './App.css';
 import MysteryWord from "./components/MysteryWord";
 import Input from "./components/Input";
 import ProposedLetters from "./components/ProposedLetters";
+import './fonts/Sweety-Rasty.otf';
 
 type AppProps = {};
 type AppState = {
