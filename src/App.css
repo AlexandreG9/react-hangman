@@ -30,9 +30,10 @@ h1 {
     background-clip: text;
 }
 
-.mysteryWord {
+.mystery-word {
     font-family: "Sono Bold", serif;
     font-size: xxx-large;
+    color: #566148;
 }
 
 .App {
@@ -42,4 +43,18 @@ h1 {
 ul li {
     display: inline;
     margin: 0 0.5em;
+    font-size: 2em;
+    font-family: "Sono Bold";
+}
+
+.input {
+    color: white;
+}
+
+.good-letter {
+    color: #9EE04C;
+}
+
+.wrong-letter {
+    color: #94324E;
 }

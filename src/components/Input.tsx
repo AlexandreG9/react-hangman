@@ -28,7 +28,7 @@ class InputComponent extends React.Component<MyProps, MyState> {
 
     render() {
         return (
-            <div className='Input'>
+            <div className='input'>
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Veuillez saisir une lettre" maxLength={1}
                            value={this.state.selectedLetter}

@@ -11,7 +11,7 @@ function convertMysteryWord(word: string, proposedLetters: Array<string>): strin
 
 function MysteryWord(props: MysteryWordProps) {
     return (
-        <div className="mysteryWord">
+        <div className="mystery-word">
             <p>{convertMysteryWord(props.word, props.proposedLetters)}</p>
         </div>
     );
