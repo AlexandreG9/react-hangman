@@ -4,11 +4,12 @@
 }
 
 @font-face {
-    font-family: "Sono Bold";
-    src: local("Sono Bold"), url("./fonts/Sono-Bold.woff2") format("woff");
+    font-family: 'saxmono';
+    src: url("./fonts/saxmono.ttf") format("truetype");
 }
 
 html {
+    font-family: 'saxmono', monospace;
     min-width: 100%;
     min-height: 100%;
     background: rgb(86, 171, 47);
@@ -21,7 +22,7 @@ html {
 
 h1 {
     background-color: rgb(84, 159, 51);
-    font-family: "Sweet Rasty", serif;
+    font-family: "Sweet Rasty", Verdana, SansSerif;
     font-size: 6em;
     color: transparent;
     text-shadow: 0px 2px 3px rgba(131, 229, 13, 0.1);
@@ -31,7 +32,6 @@ h1 {
 }
 
 .mystery-word {
-    font-family: "Sono Bold", serif;
     font-size: xxx-large;
     color: #566148;
 }
@@ -44,7 +44,7 @@ ul li {
     display: inline;
     margin: 0 0.5em;
     font-size: 2em;
-    font-family: "Sono Bold";
+    font-family: "saxmono", Serif;
 }
 
 .input {

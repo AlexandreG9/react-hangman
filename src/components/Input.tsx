@@ -1,7 +1,7 @@
 import React from 'react';
 
 type MyProps = {
-    handleInsertLetter: (letter: string) => boolean;
+    handleInsertLetter: (letter: string) => void;
 };
 type MyState = {
     selectedLetter: string;
@@ -20,10 +20,8 @@ class InputComponent extends React.Component<MyProps, MyState> {
     handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         console.log(this.state.selectedLetter)
-        const success = this.props.handleInsertLetter(this.state.selectedLetter)
-        if (success) {
-            this.setState({selectedLetter: ""})
-        }
+        this.props.handleInsertLetter(this.state.selectedLetter)
+        this.setState({selectedLetter: ""})
     }
 
     render() {
