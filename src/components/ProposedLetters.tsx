@@ -6,10 +6,12 @@ type MyProps = {
 };
 
 const ProposedLetters = (props: MyProps) => {
-    const letterList = Array.from(props.proposedLetters).map(letter => {
-        const liClass = Array.from(props.mysteryWord).includes(letter) ? "good-letter" : "wrong-letter"
-        return <li key={letter} className={liClass}>{letter}</li>
-    })
+    const letterList = Array.from(props.proposedLetters)
+        .sort()
+        .map(letter => {
+            const liClass = Array.from(props.mysteryWord).includes(letter) ? "good-letter" : "wrong-letter"
+            return <li key={letter} className={liClass}>{letter}</li>
+        })
 
     return (
         <div className="proposed-letters">
