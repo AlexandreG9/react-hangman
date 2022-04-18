@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import MysteryWord from "./components/MysteryWord";
 import Input from "./components/Input";
+import ProposedLetters from "./components/ProposedLetters";
 
 type AppProps = {};
 type AppState = {
@@ -28,6 +29,7 @@ class App extends React.Component<AppProps, AppState> {
                 <h1>Pendu</h1>
                 <MysteryWord word={this.state.mysteryWord} proposedLetters={this.state.proposedLetters}/>
                 <Input handleInsertLetter={this.handleInputWord}/>
+                <ProposedLetters proposedLetters={this.state.proposedLetters} mysteryWord={this.state.mysteryWord}/>
             </div>
         );
     }
