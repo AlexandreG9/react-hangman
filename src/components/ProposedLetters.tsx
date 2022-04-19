@@ -6,7 +6,9 @@ type MyProps = {
 };
 
 const ProposedLetters = (props: MyProps) => {
-    const letterList = Array.from(props.proposedLetters)
+    const cleanProposedLetters = Array.from(props.proposedLetters).length === 0 ? [''] : Array.from(props.proposedLetters)
+
+    const letterList = cleanProposedLetters
         .sort()
         .map(letter => {
             const liClass = Array.from(props.mysteryWord).includes(letter) ? "good-letter" : "wrong-letter"
