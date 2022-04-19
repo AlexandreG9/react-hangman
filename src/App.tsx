@@ -17,7 +17,7 @@ class App extends React.Component<AppProps, AppState> {
         super(props);
         this.state = {
             proposedLetters: [],
-            mysteryWord: "tournesol".toUpperCase(),
+            mysteryWord: "arbre".toUpperCase(),
             failedCount: 9
         }
     }
@@ -39,18 +39,26 @@ class App extends React.Component<AppProps, AppState> {
     private updateProposedLetters(letter: string) {
         if (!this.state.proposedLetters.includes(letter)) { // If letter exists
             const newProposedLetters = [...this.state.proposedLetters, letter]
-            this.setState({proposedLetters: newProposedLetters})
+            this.setState({proposedLetters: newProposedLetters},  () => {
+                // Check if win
+                const mysteryWordArray = Array.from(this.state.mysteryWord)
+                console.log(mysteryWordArray
+                    .map(letter => console.log(letter +  this.state.proposedLetters.includes(letter))))
+                const win = mysteryWordArray
+                    .map(letter => this.state.proposedLetters.includes(letter))
+                    .reduce((a, b) => {
+                        return a && b
+                    })
+
+                if(win) {
+                    console.log('you win !')
+                } else {
+                    console.log('not yet')
+                }
+            })
             this.checkIfFailed(letter)
-            this.checkWin()
             return true
         }
-    }
-
-    private checkWin() {
-        const mysteryWordArray = Array.from(this.state.mysteryWord)
-        const win = mysteryWordArray
-            .map(letter => this.state.proposedLetters.includes(letter))
-            .reduce((a, b) => a && b)
     }
 
     render() {
