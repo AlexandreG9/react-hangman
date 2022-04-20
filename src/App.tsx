@@ -44,6 +44,8 @@ class App extends React.Component<AppProps, AppState> {
 
     handleCloseModal = () => {
         this.setState({win: false})
+        // eslint-disable-next-line no-restricted-globals
+        location.reload();
     }
 
     private updateProposedLetters(letter: string) {
@@ -78,8 +80,6 @@ class App extends React.Component<AppProps, AppState> {
                 <ProposedLetters proposedLetters={this.state.proposedLetters} mysteryWord={this.state.mysteryWord}/>
                 <HangmanImage tryCount={this.state.failedCount}/>
                 <Confetti
-                    width={1600}
-                    height={1600}
                     run={this.state.win}
                 />
                 <Modal isOpen={this.state.win} contentLabel="Example Modal"
