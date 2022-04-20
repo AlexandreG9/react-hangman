@@ -7,6 +7,7 @@ import ProposedLetters from "./components/ProposedLetters";
 import HangmanImage from "./components/HangmanImage";
 import Modal from 'react-modal';
 import appModalStyle from './AppModal.module.css';
+import Confetti from 'react-confetti';
 
 type AppProps = {};
 type AppState = {
@@ -76,6 +77,11 @@ class App extends React.Component<AppProps, AppState> {
                 <Input handleInsertLetter={this.handleInputWord}/>
                 <ProposedLetters proposedLetters={this.state.proposedLetters} mysteryWord={this.state.mysteryWord}/>
                 <HangmanImage tryCount={this.state.failedCount}/>
+                <Confetti
+                    width={1600}
+                    height={1600}
+                    run={this.state.win}
+                />
                 <Modal isOpen={this.state.win} contentLabel="Example Modal"
                        className={appModalStyle.modal}
                        overlayClassName={appModalStyle.overlay}>
