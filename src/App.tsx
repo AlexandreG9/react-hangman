@@ -8,6 +8,7 @@ import HangmanImage from "./components/HangmanImage";
 import Modal from 'react-modal';
 import appModalStyle from './AppModal.module.css';
 import Confetti from 'react-confetti';
+import {wordList} from "./WordList";
 
 type AppProps = {};
 type AppState = {
@@ -20,10 +21,11 @@ type AppState = {
 class App extends React.Component<AppProps, AppState> {
     constructor(props: AppProps) {
         super(props);
+        const wordIndex = Math.floor(Math.random() * 35) - 1;
         this.state = {
             proposedLetters: [],
-            mysteryWord: "arbre".toUpperCase(),
-            failedCount: 9,
+            mysteryWord: wordList[wordIndex],
+            failedCount: 0,
             win: false,
         }
     }
