@@ -1,4 +1,5 @@
 import React from 'react';
+import InputStyle from './Input.module.css';
 
 type MyProps = {
     handleInsertLetter: (letter: string) => void;
@@ -30,6 +31,7 @@ class InputComponent extends React.Component<MyProps, MyState> {
                 <form onSubmit={this.handleSubmit}>
                     <input type="text" placeholder="Veuillez saisir une lettre" maxLength={1}
                            value={this.state.selectedLetter}
+                           className={InputStyle.input}
                            onChange={(e) => this.handleChange(e.target.value)}/>
                     <input type="submit" value="Envoyer" disabled={this.state.selectedLetter === ""}/>
                 </form>

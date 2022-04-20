@@ -1,0 +1,10 @@
+.title {
+    background-color: rgb(84, 159, 51);
+    font-family: "Sweet Rasty", Verdana, SansSerif;
+    font-size: 6em;
+    color: transparent;
+    text-shadow: 0px 2px 3px rgba(131, 229, 13, 0.1);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+}

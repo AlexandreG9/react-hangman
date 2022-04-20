@@ -1,4 +1,5 @@
 import React from 'react';
+import MysteryStyle from './MysteryWord.module.css';
 
 interface MysteryWordProps {
     word: string
@@ -11,7 +12,7 @@ function convertMysteryWord(word: string, proposedLetters: Array<string>): strin
 
 function MysteryWord(props: MysteryWordProps) {
     return (
-        <div className="mystery-word">
+        <div className={MysteryStyle.mysteryWord}>
             <p>{convertMysteryWord(props.word, props.proposedLetters)}</p>
         </div>
     );
