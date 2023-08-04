@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../pendu.iml" filepath="$PROJECT_DIR$/../pendu.iml" />
+      <module fileurl="file://$PROJECT_DIR$/react-hangman-vite.iml" filepath="$PROJECT_DIR$/react-hangman-vite.iml" />
     </modules>
   </component>
 </project>
